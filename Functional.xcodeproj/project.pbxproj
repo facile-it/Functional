@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		382A79BB1F546118000B169E /* Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 382A79B91F546118000B169E /* Functional.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		382A79BF1F5461A9000B169E /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* F.swift */; };
 		382A79C11F546263000B169E /* Fixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A79C01F546263000B169E /* Fixed.swift */; };
 		382A79C21F546263000B169E /* Fixed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A79C01F546263000B169E /* Fixed.swift */; };
@@ -26,6 +25,7 @@
 		384AB93B1F554FFD00DE1335 /* Weakly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB9391F554FFD00DE1335 /* Weakly.swift */; };
 		384AB93D1F55509E00DE1335 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB93C1F55509E00DE1335 /* Typealiases.swift */; };
 		384AB93E1F55509E00DE1335 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB93C1F55509E00DE1335 /* Typealiases.swift */; };
+		384AB94B1F555D0000DE1335 /* Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 384AB94A1F555D0000DE1335 /* Functional.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		OBJ_20 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* F.swift */; };
 		OBJ_27 /* FunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* FunctionalTests.swift */; };
 		OBJ_29 /* Functional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Functional.framework */; };
@@ -56,7 +56,6 @@
 
 /* Begin PBXFileReference section */
 		382A79B71F546118000B169E /* Functional.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Functional.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		382A79B91F546118000B169E /* Functional.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Functional.h; sourceTree = "<group>"; };
 		382A79BA1F546118000B169E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		382A79C01F546263000B169E /* Fixed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fixed.swift; sourceTree = "<group>"; };
 		382A79C31F5462D2000B169E /* Combinators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Combinators.swift; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		384AB9421F5552BA00DE1335 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		384AB9431F5552C400DE1335 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		384AB9441F55534600DE1335 /* buildOperadics.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildOperadics.sh; sourceTree = "<group>"; };
+		384AB94A1F555D0000DE1335 /* Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functional.h; sourceTree = "<group>"; };
 		OBJ_11 /* FunctionalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Functional.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Functional.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_14 /* FunctionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FunctionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,7 +110,7 @@
 		382A79B81F546118000B169E /* Functional-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				382A79B91F546118000B169E /* Functional.h */,
+				384AB94A1F555D0000DE1335 /* Functional.h */,
 				382A79BA1F546118000B169E /* Info.plist */,
 			);
 			path = "Functional-iOS";
@@ -191,7 +191,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				382A79BB1F546118000B169E /* Functional.h in Headers */,
+				384AB94B1F555D0000DE1335 /* Functional.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
