@@ -1,0 +1,12 @@
+language: objective-c
+osx_image: xcode8.3
+xcode_project: Functional.xcodeproj
+xcode_scheme: Functional
+xcode_sdk: macosx10.12
+
+script:
+  - build
+  - xcodebuild clean build test -project "Functional.xcodeproj" -scheme "Functional" -destination 'generic/platform=macOS'
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
