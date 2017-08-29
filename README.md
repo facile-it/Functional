@@ -13,4 +13,8 @@ After checking out this project, please run the following from the project folde
 
 `bash buildOperadics.sh`.
 
+**If you're using Carthage** please run the following instead **from the main project folder** after a `carthage update` or `carthage bootstrap` failed:
+
+`bash buildOperadicsCarthage.sh`
+
 Sorry for the inconvenience.
