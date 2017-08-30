@@ -26,6 +26,7 @@
 		384AB93D1F55509E00DE1335 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB93C1F55509E00DE1335 /* Typealiases.swift */; };
 		384AB93E1F55509E00DE1335 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB93C1F55509E00DE1335 /* Typealiases.swift */; };
 		384AB94B1F555D0000DE1335 /* Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 384AB94A1F555D0000DE1335 /* Functional.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		38B820D61F5697AE00B8CEB5 /* Operadics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384AB9311F554E2800DE1335 /* Operadics.framework */; };
 		OBJ_20 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* F.swift */; };
 		OBJ_27 /* FunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* FunctionalTests.swift */; };
 		OBJ_29 /* Functional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Functional.framework */; };
@@ -70,9 +71,7 @@
 		384AB9411F5552AD00DE1335 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = codecov.yml; sourceTree = "<group>"; };
 		384AB9421F5552BA00DE1335 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		384AB9431F5552C400DE1335 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		384AB9441F55534600DE1335 /* buildOperadics.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildOperadics.sh; sourceTree = "<group>"; };
 		384AB94A1F555D0000DE1335 /* Functional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functional.h; sourceTree = "<group>"; };
-		384AB9581F556A9100DE1335 /* buildOperadicsCarthage.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = buildOperadicsCarthage.sh; sourceTree = "<group>"; };
 		OBJ_11 /* FunctionalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionalTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* Functional.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Functional.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_14 /* FunctionalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = FunctionalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +101,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_29 /* Functional.framework in Frameworks */,
+				38B820D61F5697AE00B8CEB5 /* Operadics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,8 +150,6 @@
 			children = (
 				384AB9421F5552BA00DE1335 /* LICENSE */,
 				384AB9431F5552C400DE1335 /* README.md */,
-				384AB9441F55534600DE1335 /* buildOperadics.sh */,
-				384AB9581F556A9100DE1335 /* buildOperadicsCarthage.sh */,
 				OBJ_6 /* Package.swift */,
 				384AB93F1F55512000DE1335 /* .travis.yml */,
 				384AB9411F5552AD00DE1335 /* codecov.yml */,
@@ -517,6 +515,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Functional.xcodeproj/FunctionalTests_Info.plist;
@@ -534,6 +533,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Functional.xcodeproj/FunctionalTests_Info.plist;
