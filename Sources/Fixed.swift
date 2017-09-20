@@ -7,6 +7,8 @@ extension F {
 
 	public static func ignore <A> (_ value: A) {}
 
+	public static func ignore () {}
+
 	public static func constant <A> (_ value: @escaping @autoclosure () -> A) -> () -> A {
 		return { value() }
 	}
