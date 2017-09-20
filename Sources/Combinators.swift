@@ -38,7 +38,7 @@ extension F {
 	}
 
 	public static func duplicate <A,B> (_ f: @escaping (A) -> B) -> (A,A) -> (B,B) {
-		return { tuple in (f(tuple.0),f(tuple.1)) }
+		return { (a1,a2)  in (f(a1),f(a2)) }
 	}
 
 	public static func triplicate <A> (_ a: A) -> (A,A,A) {
@@ -46,7 +46,7 @@ extension F {
 	}
 
 	public static func triplicate <A,B> (_ f: @escaping (A) -> B) -> (A,A,A) -> (B,B,B) {
-		return { tuple in (f(tuple.0),f(tuple.1),f(tuple.2)) }
+		return { (a1,a2,a3)  in (f(a1),f(a2),f(a3)) }
 	}
 }
 
