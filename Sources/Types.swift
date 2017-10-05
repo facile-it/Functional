@@ -34,6 +34,12 @@ public struct Both<A,B> {
 	}
 }
 
+extension Both where A: Equatable, B: Equatable {
+	public static func == (left: Both, right: Both) -> Bool {
+		return left.left == right.left && left.right == right.right
+	}
+}
+
 public enum Either<A,B> {
 	case left(A)
 	case right(B)
@@ -63,6 +69,19 @@ public enum Either<A,B> {
 			return .left(onLeft(value))
 		case .right(let value):
 			return .right(onRight(value))
+		}
+	}
+}
+
+extension Either where A: Equatable, B: Equatable {
+	public static func == (left: Either, right: Either) -> Bool {
+		switch (left,right) {
+		case (.left(let leftValue),.left(let rightValue)):
+			return leftValue == rightValue
+		case (.right(let leftValue),.right(let rightValue)):
+			return leftValue == rightValue
+		default:
+			return false
 		}
 	}
 }
