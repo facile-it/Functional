@@ -9,6 +9,10 @@ public struct Both<A,B> {
 		self.right = right
 	}
 
+	public static func wrap(_ tuple: (A,B)) -> Both<A,B> {
+		return Both<A,B>(tuple.0, tuple.1)
+	}
+
 	public var unwrap: (A,B) {
 		return (left,right)
 	}
@@ -17,16 +21,16 @@ public struct Both<A,B> {
 		return transform(left,right)
 	}
 
-	public func map<T,U>(onLeft: (A) -> T, onRight: (B) -> U) -> Both<T,U> {
+	public func bimap<T,U>(onLeft: (A) -> T, onRight: (B) -> U) -> Both<T,U> {
 		return Both<T,U>(onLeft(left), onRight(right))
 	}
 
-	public func map<T>(onLeft: (A) -> T) -> Both<T,B> {
-		return Both<T,B>(onLeft(left), F.identity(right))
+	public func mapLeft<T>(_ transform: (A) -> T) -> Both<T,B> {
+		return Both<T,B>(transform(left), F.identity(right))
 	}
 
-	public func map<U>(onRight: (B) -> U) -> Both<A,U> {
-		return Both<A,U>(F.identity(left), onRight(right))
+	public func mapRight<U>(_ transform: (B) -> U) -> Both<A,U> {
+		return Both<A,U>(F.identity(left), transform(right))
 	}
 }
 
