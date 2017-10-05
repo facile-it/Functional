@@ -57,7 +57,7 @@ public enum Either<A,B> {
 		}
 	}
 
-	public func map<T,U>(onLeft: (A) -> T, onRight: (B) -> U) -> Either<T,U> {
+	public func bimap<T,U>(onLeft: (A) -> T, onRight: (B) -> U) -> Either<T,U> {
 		switch self {
 		case .left(let value):
 			return .left(onLeft(value))
