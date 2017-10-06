@@ -1,6 +1,6 @@
 public typealias Endo<T> = (T) -> T
 
-public struct Both<A,B> {
+public struct Pair<A,B> {
 	public let left: A
 	public let right: B
 
@@ -9,8 +9,8 @@ public struct Both<A,B> {
 		self.right = right
 	}
 
-	public static func wrap(_ tuple: (A,B)) -> Both<A,B> {
-		return Both<A,B>(tuple.0, tuple.1)
+	public static func wrap(_ tuple: (A,B)) -> Pair<A,B> {
+		return Pair<A,B>(tuple.0, tuple.1)
 	}
 
 	public var unwrap: (A,B) {
@@ -21,21 +21,21 @@ public struct Both<A,B> {
 		return transform(left,right)
 	}
 
-	public func bimap<T,U>(onLeft: (A) -> T, onRight: (B) -> U) -> Both<T,U> {
-		return Both<T,U>(onLeft(left), onRight(right))
+	public func bimap<T,U>(onLeft: (A) -> T, onRight: (B) -> U) -> Pair<T,U> {
+		return Pair<T,U>(onLeft(left), onRight(right))
 	}
 
-	public func mapLeft<T>(_ transform: (A) -> T) -> Both<T,B> {
-		return Both<T,B>(transform(left), F.identity(right))
+	public func mapLeft<T>(_ transform: (A) -> T) -> Pair<T,B> {
+		return Pair<T,B>(transform(left), F.identity(right))
 	}
 
-	public func mapRight<U>(_ transform: (B) -> U) -> Both<A,U> {
-		return Both<A,U>(F.identity(left), transform(right))
+	public func mapRight<U>(_ transform: (B) -> U) -> Pair<A,U> {
+		return Pair<A,U>(F.identity(left), transform(right))
 	}
 }
 
-extension Both where A: Equatable, B: Equatable {
-	public static func == (left: Both, right: Both) -> Bool {
+extension Pair where A: Equatable, B: Equatable {
+	public static func == (left: Pair, right: Pair) -> Bool {
 		return left.left == right.left && left.right == right.right
 	}
 }
