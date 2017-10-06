@@ -27,3 +27,13 @@ infix operator => : LogicalImplicationPrecedence
 public func => (_ left: Bool, _ right: @autoclosure () -> Bool) -> Bool {
 	return left.implies(right())
 }
+
+extension Bool {
+	public func ifTrue<A>(then: @autoclosure () -> A, else: @autoclosure () -> A) -> A {
+		if self {
+			return then()
+		} else {
+			return `else`()
+		}
+	}
+}
