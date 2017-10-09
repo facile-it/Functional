@@ -36,4 +36,12 @@ extension Bool {
 			return `else`()
 		}
 	}
+
+	public func ifTrue(_ call: () -> ()) {
+		ifTrue(then: call(), else: ())
+	}
+
+	public func ifFalse(_ call: () -> ()) {
+		ifTrue(then: (), else: call())
+	}
 }

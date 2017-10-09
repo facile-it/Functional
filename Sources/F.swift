@@ -3,3 +3,5 @@ The *free* functions in `Functional` are defined as static functions on the `F` 
 */
 
 public enum F {}
+
+public typealias Endo<T> = (T) -> T
