@@ -16,6 +16,7 @@
 		382A79C91F547446000B169E /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A79C71F547446000B169E /* Curry.swift */; };
 		382A79CB1F547552000B169E /* Boolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A79CA1F547552000B169E /* Boolean.swift */; };
 		382A79CC1F547552000B169E /* Boolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A79CA1F547552000B169E /* Boolean.swift */; };
+		3842D7111F8BB2890056FC65 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842D7101F8BB2890056FC65 /* Pair.swift */; };
 		384AB9321F554E2800DE1335 /* Operadics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384AB9311F554E2800DE1335 /* Operadics.framework */; };
 		384AB9341F554E3200DE1335 /* Operadics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384AB9331F554E3200DE1335 /* Operadics.framework */; };
 		384AB9351F554E3E00DE1335 /* Operadics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 384AB9311F554E2800DE1335 /* Operadics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -23,8 +24,8 @@
 		384AB9381F554F9100DE1335 /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB9361F554F9100DE1335 /* Reference.swift */; };
 		384AB93A1F554FFD00DE1335 /* Weakly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB9391F554FFD00DE1335 /* Weakly.swift */; };
 		384AB93B1F554FFD00DE1335 /* Weakly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB9391F554FFD00DE1335 /* Weakly.swift */; };
-		384AB93D1F55509E00DE1335 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB93C1F55509E00DE1335 /* Types.swift */; };
-		384AB93E1F55509E00DE1335 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB93C1F55509E00DE1335 /* Types.swift */; };
+		384AB93D1F55509E00DE1335 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB93C1F55509E00DE1335 /* Either.swift */; };
+		384AB93E1F55509E00DE1335 /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384AB93C1F55509E00DE1335 /* Either.swift */; };
 		384AB94B1F555D0000DE1335 /* Functional.h in Headers */ = {isa = PBXBuildFile; fileRef = 384AB94A1F555D0000DE1335 /* Functional.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38B820D61F5697AE00B8CEB5 /* Operadics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384AB9311F554E2800DE1335 /* Operadics.framework */; };
 		OBJ_20 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_8 /* F.swift */; };
@@ -62,11 +63,12 @@
 		382A79C31F5462D2000B169E /* Combinators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Combinators.swift; sourceTree = "<group>"; };
 		382A79C71F547446000B169E /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
 		382A79CA1F547552000B169E /* Boolean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boolean.swift; sourceTree = "<group>"; };
+		3842D7101F8BB2890056FC65 /* Pair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
 		384AB9311F554E2800DE1335 /* Operadics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Operadics.framework; path = Carthage/Build/Mac/Operadics.framework; sourceTree = "<group>"; };
 		384AB9331F554E3200DE1335 /* Operadics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Operadics.framework; path = Carthage/Build/iOS/Operadics.framework; sourceTree = "<group>"; };
 		384AB9361F554F9100DE1335 /* Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
 		384AB9391F554FFD00DE1335 /* Weakly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weakly.swift; sourceTree = "<group>"; };
-		384AB93C1F55509E00DE1335 /* Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		384AB93C1F55509E00DE1335 /* Either.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
 		384AB93F1F55512000DE1335 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		384AB9411F5552AD00DE1335 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = codecov.yml; sourceTree = "<group>"; };
 		384AB9421F5552BA00DE1335 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -170,8 +172,9 @@
 				OBJ_8 /* F.swift */,
 				382A79C01F546263000B169E /* Fixed.swift */,
 				384AB9361F554F9100DE1335 /* Reference.swift */,
-				384AB93C1F55509E00DE1335 /* Types.swift */,
+				384AB93C1F55509E00DE1335 /* Either.swift */,
 				384AB9391F554FFD00DE1335 /* Weakly.swift */,
+				3842D7101F8BB2890056FC65 /* Pair.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -306,7 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				384AB93E1F55509E00DE1335 /* Types.swift in Sources */,
+				384AB93E1F55509E00DE1335 /* Either.swift in Sources */,
 				382A79C21F546263000B169E /* Fixed.swift in Sources */,
 				382A79C51F5462D2000B169E /* Combinators.swift in Sources */,
 				382A79BF1F5461A9000B169E /* F.swift in Sources */,
@@ -321,11 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				384AB93D1F55509E00DE1335 /* Types.swift in Sources */,
+				384AB93D1F55509E00DE1335 /* Either.swift in Sources */,
 				382A79C11F546263000B169E /* Fixed.swift in Sources */,
 				382A79C41F5462D2000B169E /* Combinators.swift in Sources */,
 				OBJ_20 /* F.swift in Sources */,
 				384AB9371F554F9100DE1335 /* Reference.swift in Sources */,
+				3842D7111F8BB2890056FC65 /* Pair.swift in Sources */,
 				384AB93A1F554FFD00DE1335 /* Weakly.swift in Sources */,
 				382A79CB1F547552000B169E /* Boolean.swift in Sources */,
 				382A79C81F547446000B169E /* Curry.swift in Sources */,
