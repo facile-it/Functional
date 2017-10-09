@@ -63,6 +63,14 @@ public enum Either<A,B> {
 		}
 	}
 
+	public func foldToLeft(_ transformRight: (B) -> A) -> A {
+		return fold(onLeft: F.identity, onRight: transformRight)
+	}
+
+	public func foldToRight(_ transformLeft: (A) -> B) -> B {
+		return fold(onLeft: transformLeft, onRight: F.identity)
+	}
+
 	public func bimap<T,U>(onLeft: (A) -> T, onRight: (B) -> U) -> Either<T,U> {
 		switch self {
 		case .left(let value):
