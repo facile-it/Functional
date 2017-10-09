@@ -5,7 +5,7 @@ public protocol PairType {
 	func fold<T>(_ transform: (LeftType,RightType) -> T) -> T
 }
 
-public struct Pair<A,B> {
+public struct Pair<A,B>: PairType {
 	fileprivate let _left: A
 	fileprivate let _right: B
 

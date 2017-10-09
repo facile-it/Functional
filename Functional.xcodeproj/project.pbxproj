@@ -169,12 +169,12 @@
 				382A79CA1F547552000B169E /* Boolean.swift */,
 				382A79C31F5462D2000B169E /* Combinators.swift */,
 				382A79C71F547446000B169E /* Curry.swift */,
+				384AB93C1F55509E00DE1335 /* Either.swift */,
 				OBJ_8 /* F.swift */,
 				382A79C01F546263000B169E /* Fixed.swift */,
-				384AB9361F554F9100DE1335 /* Reference.swift */,
-				384AB93C1F55509E00DE1335 /* Either.swift */,
-				384AB9391F554FFD00DE1335 /* Weakly.swift */,
 				3842D7101F8BB2890056FC65 /* Pair.swift */,
+				384AB9361F554F9100DE1335 /* Reference.swift */,
+				384AB9391F554FFD00DE1335 /* Weakly.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
