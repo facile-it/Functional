@@ -66,18 +66,34 @@ public func • <A,B,C> (second: @escaping (B) throws -> C, first: @escaping (A)
 	return F.compose(first, second)
 }
 
-public func |> <A,B,C> (first: @escaping (A) -> B, second: @escaping (B) -> C) -> (A) -> C {
+public func <<< <A,B,C> (second: @escaping (B) -> C, first: @escaping (A) -> B) -> (A) -> C {
 	return F.compose(first, second)
 }
 
-public func |> <A,B,C> (first: @escaping (A) throws -> B, second: @escaping (B) -> C) -> (A) throws -> C {
+public func <<< <A,B,C> (second: @escaping (B) -> C, first: @escaping (A) throws -> B) -> (A) throws -> C {
 	return F.compose(first, second)
 }
 
-public func |> <A,B,C> (first: @escaping (A) -> B, second: @escaping (B) throws -> C) -> (A) throws -> C {
+public func <<< <A,B,C> (second: @escaping (B) throws -> C, first: @escaping (A) -> B) -> (A) throws -> C {
 	return F.compose(first, second)
 }
 
-public func |> <A,B,C> (first: @escaping (A) throws -> B, second: @escaping (B) throws -> C) -> (A) throws -> C {
+public func <<< <A,B,C> (second: @escaping (B) throws -> C, first: @escaping (A) throws -> B) -> (A) throws -> C {
+	return F.compose(first, second)
+}
+
+public func >>> <A,B,C> (first: @escaping (A) -> B, second: @escaping (B) -> C) -> (A) -> C {
+	return F.compose(first, second)
+}
+
+public func >>> <A,B,C> (first: @escaping (A) throws -> B, second: @escaping (B) -> C) -> (A) throws -> C {
+	return F.compose(first, second)
+}
+
+public func >>> <A,B,C> (first: @escaping (A) -> B, second: @escaping (B) throws -> C) -> (A) throws -> C {
+	return F.compose(first, second)
+}
+
+public func >>> <A,B,C> (first: @escaping (A) throws -> B, second: @escaping (B) throws -> C) -> (A) throws -> C {
 	return F.compose(first, second)
 }
