@@ -32,3 +32,9 @@ extension FunctionType {
 		return promap(source: transform, target: F.identity)
 	}
 }
+
+extension FunctionType where SourceType == TargetType {
+	public static var identity: Function<SourceType,TargetType> {
+		return Function<SourceType,TargetType>.init { $0 }
+	}
+}
