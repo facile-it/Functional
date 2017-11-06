@@ -20,16 +20,16 @@ public struct Function<A,B>: FunctionType {
 }
 
 extension FunctionType {
-	public func promap<A,B>(source: @escaping (A) -> SourceType, target: @escaping (TargetType) -> B) -> Function<A,B> {
+	public func dimap<A,B>(source: @escaping (A) -> SourceType, target: @escaping (TargetType) -> B) -> Function<A,B> {
 		return Function<A,B>.init { value in target(self.call(source(value))) }
 	}
 
 	public func map<T>(_ transform: @escaping (TargetType) -> T) -> Function<SourceType,T> {
-		return promap(source: F.identity, target: transform)
+		return dimap(source: F.identity, target: transform)
 	}
 
 	public func contramap<T>(_ transform: @escaping (T) -> SourceType) -> Function<T,TargetType> {
-		return promap(source: transform, target: F.identity)
+		return dimap(source: transform, target: F.identity)
 	}
 }
 
