@@ -12,6 +12,18 @@ extension F {
 	public static func apply <A,B> (_ function: (A) throws -> B, _ value: A) rethrows -> B {
 		return try function(value)
 	}
+
+	public func asTuple <A,B> (_ a: A, _ b: B) -> (A,B) {
+		return (a,b)
+	}
+
+	public static func first <A,B> (_ a: A, _ b: B) -> A {
+		return a
+	}
+
+	public static func second <A,B> (_ a: A, _ b: B) -> B {
+		return b
+	}
 }
 
 public func § <A,B> (function: (A) throws -> B, value: A) rethrows -> B {

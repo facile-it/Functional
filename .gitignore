@@ -5,3 +5,5 @@ Carthage/Checkouts
 *.bcsymbolmap
 Functional.xcodeproj/project.xcworkspace/xcuserdata
 Functional.xcodeproj/xcuserdata
+Play.playground
+Play.xcworkspace

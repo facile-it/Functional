@@ -17,6 +17,10 @@ public final class Ref<T> {
 		listeners[listener] = nil
 	}
 
+	public func removeAll() {
+		listeners.removeAll()
+	}
+
 	private func notify() {
 		listeners.values.forEach { $0(value) }
 	}
