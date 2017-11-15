@@ -4,9 +4,13 @@ public func identity <A> (_ value: A) -> A {
 	return value
 }
 
-public func ignore <A> (_ value: A) {}
-
 public func ignore () {}
+
+public func ignore <A> (_ a: A) {}
+
+public func ignore <A,B> (_ a: A, _ b: B) {}
+
+public func ignore <A,B,C> (_ a: A, _ b: B, _ c: C) {}
 
 public func asTuple <A,B> (_ a: A, _ b: B) -> (A,B) {
 	return (a,b)
