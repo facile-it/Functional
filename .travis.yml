@@ -5,7 +5,6 @@ xcode_scheme: Functional
 xcode_sdk: macosx10.13
 
 script:
-  - build
   - xcodebuild clean build test -project "Functional.xcodeproj" -scheme "Functional" -destination 'generic/platform=macOS'
 
 after_success:
