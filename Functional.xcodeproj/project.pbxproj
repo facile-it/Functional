@@ -178,11 +178,11 @@
 				384AB93C1F55509E00DE1335 /* Either.swift */,
 				382A79C01F546263000B169E /* Fixed.swift */,
 				383639A91FB0D30B00E5973F /* Function.swift */,
+				38C4C89C1FBC42C2001F7407 /* Operators.swift */,
 				3842D7101F8BB2890056FC65 /* Pair.swift */,
 				384AB9361F554F9100DE1335 /* Reference.swift */,
-				384AB9391F554FFD00DE1335 /* Weakly.swift */,
-				38C4C89C1FBC42C2001F7407 /* Operators.swift */,
 				38C4C89F1FBC71D2001F7407 /* Typealiases.swift */,
+				384AB9391F554FFD00DE1335 /* Weakly.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
