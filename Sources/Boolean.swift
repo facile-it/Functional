@@ -29,19 +29,19 @@ public func => (_ left: Bool, _ right: @autoclosure () -> Bool) -> Bool {
 }
 
 extension Bool {
-	public func ifTrue<A>(then: @autoclosure () -> A, else: @autoclosure () -> A) -> A {
+	public func fold<A>(onTrue: @autoclosure () -> A, onFalse: @autoclosure () -> A) -> A {
 		if self {
-			return then()
+			return onTrue()
 		} else {
-			return `else`()
+			return onFalse()
 		}
 	}
 
 	public func ifTrue(_ call: () -> ()) {
-		ifTrue(then: call(), else: ())
+		fold(onTrue: call(), onFalse: ())
 	}
 
 	public func ifFalse(_ call: () -> ()) {
-		ifTrue(then: (), else: call())
+		fold(onTrue: (), onFalse: call())
 	}
 }

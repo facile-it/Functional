@@ -43,10 +43,10 @@ extension PairType {
 	}
 
 	public func mapLeft<T>(_ transform: (LeftType) -> T) -> Pair<T,RightType> {
-		return bimap(onLeft: transform, onRight: F.identity)
+		return bimap(onLeft: transform, onRight: identity)
 	}
 
 	public func mapRight<U>(_ transform: (RightType) -> U) -> Pair<LeftType,U> {
-		return bimap(onLeft: F.identity, onRight: transform)
+		return bimap(onLeft: identity, onRight: transform)
 	}
 }

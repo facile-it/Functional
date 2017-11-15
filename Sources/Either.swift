@@ -34,19 +34,19 @@ extension Either where A: Equatable, B: Equatable {
 
 extension EitherType {
 	public var tryLeft: LeftType? {
-		return fold(onLeft: F.identity, onRight: { _ in nil })
+		return fold(onLeft: identity, onRight: { _ in nil })
 	}
 
 	public var tryRight: RightType? {
-		return fold(onLeft: { _ in nil }, onRight: F.identity)
+		return fold(onLeft: { _ in nil }, onRight: identity)
 	}
 
 	public func foldToLeft(_ transformRight: (RightType) -> LeftType) -> LeftType {
-		return fold(onLeft: F.identity, onRight: transformRight)
+		return fold(onLeft: identity, onRight: transformRight)
 	}
 
 	public func foldToRight(_ transformLeft: (LeftType) -> RightType) -> RightType {
-		return fold(onLeft: transformLeft, onRight: F.identity)
+		return fold(onLeft: transformLeft, onRight: identity)
 	}
 
 	public func bimap<T,U>(onLeft: (LeftType) -> T, onRight: (RightType) -> U) -> Either<T,U> {
@@ -56,10 +56,10 @@ extension EitherType {
 	}
 
 	public func mapLeft<T>(_ transform: (LeftType) -> T) -> Either<T,RightType> {
-		return bimap(onLeft: transform, onRight: F.identity)
+		return bimap(onLeft: transform, onRight: identity)
 	}
 
 	public func mapRight<U>(_ transform: (RightType) -> U) -> Either<LeftType,U> {
-		return bimap(onLeft: F.identity, onRight: transform)
+		return bimap(onLeft: identity, onRight: transform)
 	}
 }

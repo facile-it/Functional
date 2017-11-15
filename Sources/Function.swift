@@ -25,11 +25,11 @@ extension FunctionType {
 	}
 
 	public func map<T>(_ transform: @escaping (TargetType) -> T) -> Function<SourceType,T> {
-		return dimap(source: F.identity, target: transform)
+		return dimap(source: { $0 }, target: transform)
 	}
 
 	public func contramap<T>(_ transform: @escaping (T) -> SourceType) -> Function<T,TargetType> {
-		return dimap(source: transform, target: F.identity)
+		return dimap(source: transform, target: { $0 })
 	}
 }
 
