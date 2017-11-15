@@ -1,7 +1,15 @@
 import Operadics
 
-public func identity <A> (_ value: A) -> A {
-	return value
+public func identity <A> (_ a: A) -> A {
+	return a
+}
+
+public func identity <A,B> (_ a: A, _ b: B) -> (A,B) {
+	return (a,b)
+}
+
+public func identity <A,B,C> (_ a: A, _ b: B, _ c: C) -> (A,B,C) {
+	return (a,b,c)
 }
 
 public func ignore () {}
@@ -12,13 +20,13 @@ public func ignore <A,B> (_ a: A, _ b: B) {}
 
 public func ignore <A,B,C> (_ a: A, _ b: B, _ c: C) {}
 
-public func asTuple <A,B> (_ a: A, _ b: B) -> (A,B) {
-	return (a,b)
-}
-
-public func asTuple <A,B,C> (_ a: A, _ b: B, _ c: C) -> (A,B,C) {
-	return (a,b,c)
-}
+//public func asTuple <A,B> (_ a: A, _ b: B) -> (A,B) {
+//	return (a,b)
+//}
+//
+//public func asTuple <A,B,C> (_ a: A, _ b: B, _ c: C) -> (A,B,C) {
+//	return (a,b,c)
+//}
 
 public func first <A,B> (_ a: A, _ b: B) -> A {
 	return a
