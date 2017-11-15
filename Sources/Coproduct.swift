@@ -27,10 +27,10 @@ extension Coproduct where A: Equatable, B: Equatable {
 					onLeft: { left == $0 },
 					onRight: { _ in false })
 		},
-			onRight: { left in
+			onRight: { right in
 				rhs.fold(
 					onLeft: { _ in false },
-					onRight: { left == $0 })
+					onRight: { right == $0 })
 		})
 	}
 }
