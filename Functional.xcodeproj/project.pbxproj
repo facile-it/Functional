@@ -15,7 +15,7 @@
 		382A79C91F547446000B169E /* Curry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A79C71F547446000B169E /* Curry.swift */; };
 		382A79CB1F547552000B169E /* Boolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A79CA1F547552000B169E /* Boolean.swift */; };
 		382A79CC1F547552000B169E /* Boolean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382A79CA1F547552000B169E /* Boolean.swift */; };
-		383639AA1FB0D30B00E5973F /* Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383639A91FB0D30B00E5973F /* Function.swift */; };
+		383639AA1FB0D30B00E5973F /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383639A91FB0D30B00E5973F /* Exponential.swift */; };
 		384AB9321F554E2800DE1335 /* Operadics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384AB9311F554E2800DE1335 /* Operadics.framework */; };
 		384AB9341F554E3200DE1335 /* Operadics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384AB9331F554E3200DE1335 /* Operadics.framework */; };
 		384AB9351F554E3E00DE1335 /* Operadics.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 384AB9311F554E2800DE1335 /* Operadics.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -33,6 +33,7 @@
 		38C4C8A11FBC71D3001F7407 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C4C89F1FBC71D2001F7407 /* Typealiases.swift */; };
 		38C4C8A31FBC7840001F7407 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C4C8A21FBC7840001F7407 /* Product.swift */; };
 		38C4C8A41FBC7840001F7407 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C4C8A21FBC7840001F7407 /* Product.swift */; };
+		38FA7BFC1FBC84A000AA385F /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383639A91FB0D30B00E5973F /* Exponential.swift */; };
 		OBJ_27 /* FunctionalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* FunctionalTests.swift */; };
 		OBJ_29 /* Functional.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Functional.framework */; };
 /* End PBXBuildFile section */
@@ -67,7 +68,7 @@
 		382A79C31F5462D2000B169E /* Combinators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Combinators.swift; sourceTree = "<group>"; };
 		382A79C71F547446000B169E /* Curry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curry.swift; sourceTree = "<group>"; };
 		382A79CA1F547552000B169E /* Boolean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boolean.swift; sourceTree = "<group>"; };
-		383639A91FB0D30B00E5973F /* Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Function.swift; sourceTree = "<group>"; };
+		383639A91FB0D30B00E5973F /* Exponential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exponential.swift; sourceTree = "<group>"; };
 		384AB9311F554E2800DE1335 /* Operadics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Operadics.framework; path = Carthage/Build/Mac/Operadics.framework; sourceTree = "<group>"; };
 		384AB9331F554E3200DE1335 /* Operadics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Operadics.framework; path = Carthage/Build/iOS/Operadics.framework; sourceTree = "<group>"; };
 		384AB9361F554F9100DE1335 /* Reference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
@@ -176,8 +177,8 @@
 				382A79C31F5462D2000B169E /* Combinators.swift */,
 				384AB93C1F55509E00DE1335 /* Coproduct.swift */,
 				382A79C71F547446000B169E /* Curry.swift */,
+				383639A91FB0D30B00E5973F /* Exponential.swift */,
 				382A79C01F546263000B169E /* Fixed.swift */,
-				383639A91FB0D30B00E5973F /* Function.swift */,
 				38C4C89C1FBC42C2001F7407 /* Operators.swift */,
 				38C4C8A21FBC7840001F7407 /* Product.swift */,
 				384AB9361F554F9100DE1335 /* Reference.swift */,
@@ -320,6 +321,7 @@
 				384AB93E1F55509E00DE1335 /* Coproduct.swift in Sources */,
 				38C4C89E1FBC42C2001F7407 /* Operators.swift in Sources */,
 				38C4C8A11FBC71D3001F7407 /* Typealiases.swift in Sources */,
+				38FA7BFC1FBC84A000AA385F /* Exponential.swift in Sources */,
 				382A79C21F546263000B169E /* Fixed.swift in Sources */,
 				382A79C51F5462D2000B169E /* Combinators.swift in Sources */,
 				384AB9381F554F9100DE1335 /* Reference.swift in Sources */,
@@ -344,7 +346,7 @@
 				38C4C8A01FBC71D3001F7407 /* Typealiases.swift in Sources */,
 				382A79CB1F547552000B169E /* Boolean.swift in Sources */,
 				382A79C81F547446000B169E /* Curry.swift in Sources */,
-				383639AA1FB0D30B00E5973F /* Function.swift in Sources */,
+				383639AA1FB0D30B00E5973F /* Exponential.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

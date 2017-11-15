@@ -12,6 +12,14 @@ public func identity <A,B,C> (_ a: A, _ b: B, _ c: C) -> (A,B,C) {
 	return (a,b,c)
 }
 
+public func deconstruct <A,B,T> (_ function: @escaping ((A,B)) -> T) -> (A,B) -> T {
+	return { a, b in function((a,b)) }
+}
+
+public func deconstruct <A,B,C,T> (_ function: @escaping ((A,B,C)) -> T) -> (A,B,C) -> T {
+	return { a, b, c in function((a,b,c)) }
+}
+
 public func ignore () {}
 
 public func ignore <A> (_ a: A) {}
@@ -19,14 +27,6 @@ public func ignore <A> (_ a: A) {}
 public func ignore <A,B> (_ a: A, _ b: B) {}
 
 public func ignore <A,B,C> (_ a: A, _ b: B, _ c: C) {}
-
-//public func asTuple <A,B> (_ a: A, _ b: B) -> (A,B) {
-//	return (a,b)
-//}
-//
-//public func asTuple <A,B,C> (_ a: A, _ b: B, _ c: C) -> (A,B,C) {
-//	return (a,b,c)
-//}
 
 public func first <A,B> (_ a: A, _ b: B) -> A {
 	return a
