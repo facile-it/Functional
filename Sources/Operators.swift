@@ -1,5 +1,7 @@
 import Operadics
 
+public typealias Endo<T> = (T) -> T
+
 precedencegroup SequentialCompositionPrecedence {
 	associativity: left
 	higherThan: CompositionPrecedence
@@ -7,4 +9,10 @@ precedencegroup SequentialCompositionPrecedence {
 
 infix operator ... : SequentialCompositionPrecedence
 
-public typealias Endo<T> = (T) -> T
+precedencegroup LogicalImplicationPrecedence {
+	associativity: left
+	higherThan: TernaryPrecedence
+	lowerThan: LogicalDisjunctionPrecedence
+}
+
+infix operator => : LogicalImplicationPrecedence

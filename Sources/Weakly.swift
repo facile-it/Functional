@@ -53,4 +53,3 @@ public func weakly<T>(_ reference: T?, closure: @escaping (T) -> ()) -> () -> ()
 		closure(some)
 	}
 }
-
