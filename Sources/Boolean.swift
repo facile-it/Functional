@@ -16,13 +16,6 @@ extension Bool {
 	}
 }
 
-precedencegroup LogicalImplicationPrecedence {
-	associativity: left
-	higherThan: TernaryPrecedence
-	lowerThan: LogicalDisjunctionPrecedence
-}
-
-infix operator => : LogicalImplicationPrecedence
 
 public func => (_ left: Bool, _ right: @autoclosure () -> Bool) -> Bool {
 	return left.implies(right())
