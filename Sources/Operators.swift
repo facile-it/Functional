@@ -1,4 +1,4 @@
-import Operadics
+import Abstract
 
 precedencegroup SequentialCompositionPrecedence {
 	associativity: left

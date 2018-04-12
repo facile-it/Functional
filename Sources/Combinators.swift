@@ -1,4 +1,4 @@
-import Operadics
+import Abstract
 
 public func compose <A,B,C> (_ first: @escaping (A) -> B, _ second: @escaping (B) -> C) -> (A) -> C {
 	return { second(first($0)) }

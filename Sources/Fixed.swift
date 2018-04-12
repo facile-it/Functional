@@ -1,4 +1,4 @@
-import Operadics
+import Abstract
 
 public func identity <A> (_ a: A) -> A {
 	return a
